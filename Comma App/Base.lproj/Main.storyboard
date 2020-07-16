@@ -73,7 +73,7 @@
                                     <constraint firstAttribute="height" constant="73" id="sQh-xx-EFZ"/>
                                 </constraints>
                                 <attributedString key="attributedText">
-                                    <fragment content="Welcome To">
+                                    <fragment content="WELCOME TO">
                                         <attributes>
                                             <font key="NSFont" size="29" name="Avenir-Heavy"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
@@ -82,21 +82,31 @@
                                 </attributedString>
                                 <color key="highlightedColor" red="0.19215686274509802" green="0.086274509803921567" blue="0.23529411764705882" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="commalogo (1)" translatesAutoresizingMaskIntoConstraints="NO" id="JPi-r6-cVd">
-                                <rect key="frame" x="83" y="154" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="commalogo (1)" translatesAutoresizingMaskIntoConstraints="NO" id="JPi-r6-cVd">
+                                <rect key="frame" x="-543" y="127" width="1500" height="155"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="1500" id="FZe-Cd-J1S"/>
+                                    <constraint firstAttribute="height" constant="155" id="XIx-X1-GwD"/>
+                                </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vines image" translatesAutoresizingMaskIntoConstraints="NO" id="nC6-d7-OGI">
-                                <rect key="frame" x="87" y="513" width="240" height="229"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vines image" translatesAutoresizingMaskIntoConstraints="NO" id="nC6-d7-OGI">
+                                <rect key="frame" x="0.0" y="462" width="434" height="380"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="434" id="AKL-Wz-VUm"/>
+                                    <constraint firstAttribute="height" constant="380" id="RKc-v2-KDV"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="XjH-Z5-nhx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="B9Y-wD-6E4"/>
+                            <constraint firstAttribute="bottom" secondItem="nC6-d7-OGI" secondAttribute="bottom" id="b30-uA-HWd"/>
                             <constraint firstItem="fiY-vZ-Jaj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="eFl-4l-Q9c"/>
+                            <constraint firstItem="JPi-r6-cVd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="127" id="fhL-Jj-SaE"/>
+                            <constraint firstItem="nC6-d7-OGI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="g7D-MN-4Zw"/>
                             <constraint firstItem="XjH-Z5-nhx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="64" id="iiM-Ku-xkd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fiY-vZ-Jaj" secondAttribute="trailing" id="ltL-XF-6Z9"/>
+                            <constraint firstItem="JPi-r6-cVd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lvd-bD-bZ2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
