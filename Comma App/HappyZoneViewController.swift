@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  HappyZoneViewController.swift
 //  Comma App
 //
 //  Created by Apple on 7/15/20.
@@ -8,15 +8,10 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class HappyZoneViewController: UIViewController {
+    
     @IBOutlet weak var backgroundGradientView: UIView!
-    
-    @IBOutlet weak var meditationButton: UIButton!
-    
-    @IBAction func happyZoneButton(_ sender: Any) {
-    }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
     
@@ -38,7 +33,6 @@ class ViewController: UIViewController {
 
     override var shouldAutorotate: Bool {
         return false
-    }
-    
-}
 
+}
+}

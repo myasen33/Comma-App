@@ -12,24 +12,196 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Comma_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Comma" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tr5-jR-XJv">
-                                <rect key="frame" x="186" y="200" width="60" height="21"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fiY-vZ-Jaj">
+                                <rect key="frame" x="0.0" y="189" width="414" height="128"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UGp-Ou-SQn">
+                                <rect key="frame" x="92" y="348" width="231" height="63"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="backgroundColor" red="0.81960784310000001" green="0.91372549020000005" blue="0.76470588240000004" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Start Meditating">
+                                            <attributes>
+                                                <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                <font key="NSFont" size="21" name="Avenir-LightOblique"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="Nxz-bv-nwG" kind="show" id="Xpm-ni-uCg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yeX-yT-O50">
+                                <rect key="frame" x="91.5" y="442" width="231" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.81960784310000001" green="0.91372549020000005" blue="0.76470588240000004" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Happy Zone">
+                                            <attributes>
+                                                <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                <font key="NSFont" size="21" name="Avenir-LightOblique"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="8yy-pj-9vr" kind="show" id="yNP-Jb-ADX"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XjH-Z5-nhx">
+                                <rect key="frame" x="73.5" y="64" width="267.5" height="73"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="267.5" id="VSb-I9-1Oe"/>
+                                    <constraint firstAttribute="height" constant="73" id="sQh-xx-EFZ"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Welcome to Comma">
+                                        <attributes>
+                                            <font key="NSFont" size="29" name="Avenir-Roman"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="XjH-Z5-nhx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="B9Y-wD-6E4"/>
+                            <constraint firstItem="fiY-vZ-Jaj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="eFl-4l-Q9c"/>
+                            <constraint firstItem="XjH-Z5-nhx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="64" id="iiM-Ku-xkd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fiY-vZ-Jaj" secondAttribute="trailing" id="ltL-XF-6Z9"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="731-TY-fMr"/>
+                    <connections>
+                        <outlet property="backgroundGradientView" destination="fiY-vZ-Jaj" id="9Ox-tA-oke"/>
+                        <outlet property="meditationButton" destination="UGp-Ou-SQn" id="ln6-z7-gYa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="130"/>
+            <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
+        </scene>
+        <!--Happy Zone View Controller-->
+        <scene sceneID="6BO-yJ-1h6">
+            <objects>
+                <viewController id="8yy-pj-9vr" customClass="HappyZoneViewController" customModule="Comma_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7YJ-Ak-uX9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0hM-WV-osi">
+                                <rect key="frame" x="0.0" y="278" width="414" height="128"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="74T-ms-OKE">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="barTintColor" red="0.81960784310000001" green="0.91372549020000005" blue="0.76470588240000004" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="22"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Happy Zone" id="EBt-d1-lb1">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="return" catalog="system" id="csT-4b-5Zh">
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="show" id="48T-NN-I8R"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="jxG-Sm-fU2" firstAttribute="trailing" secondItem="0hM-WV-osi" secondAttribute="trailing" id="CIX-nZ-wSc"/>
+                            <constraint firstItem="0hM-WV-osi" firstAttribute="leading" secondItem="jxG-Sm-fU2" secondAttribute="leading" id="Xen-cs-zjA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jxG-Sm-fU2"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="wWx-6e-41R"/>
+                    <connections>
+                        <outlet property="backgroundGradientView" destination="0hM-WV-osi" id="i6O-qx-qxL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GIE-NZ-2iV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="931" y="475"/>
+        </scene>
+        <!--Meditation View Controller-->
+        <scene sceneID="HT9-bT-M4C">
+            <objects>
+                <viewController id="Nxz-bv-nwG" customClass="MeditationViewController" customModule="Comma_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xGs-F2-b2r">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pDh-65-qT0">
+                                <rect key="frame" x="0.0" y="230" width="414" height="128"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dJC-vJ-CHu">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="barTintColor" red="0.81960784310000001" green="0.91372549020000005" blue="0.76470588240000004" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="22"/>
+                                </textAttributes>
+                                <textAttributes key="largeTitleTextAttributes">
+                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="22"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Meditation" id="ce3-61-MwV">
+                                        <barButtonItem key="leftBarButtonItem" title="Return" image="return" catalog="system" landscapeImage="return" id="x5w-dI-E7E">
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="show" id="Pa2-BQ-wuv"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Hu3-9A-ZVk" firstAttribute="trailing" secondItem="pDh-65-qT0" secondAttribute="trailing" id="Ujq-Sc-Bj4"/>
+                            <constraint firstItem="pDh-65-qT0" firstAttribute="leading" secondItem="Hu3-9A-ZVk" secondAttribute="leading" id="ma5-au-blm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Hu3-9A-ZVk"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="DaE-2G-kFo"/>
+                    <connections>
+                        <outlet property="backgroundGradientView" destination="pDh-65-qT0" id="JTg-NH-Vid"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZA9-Kv-gx2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="919" y="-215"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Pa2-BQ-wuv"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="return" catalog="system" width="128" height="101"/>
+    </resources>
 </document>

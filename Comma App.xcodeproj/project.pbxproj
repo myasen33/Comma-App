@@ -14,6 +14,8 @@
 		189073CE24BF84150075A810 /* Comma_App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 189073CC24BF84150075A810 /* Comma_App.xcdatamodeld */; };
 		189073D024BF84160075A810 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 189073CF24BF84160075A810 /* Assets.xcassets */; };
 		189073D324BF84160075A810 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 189073D124BF84160075A810 /* LaunchScreen.storyboard */; };
+		189073DB24BFAD910075A810 /* MeditationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189073DA24BFAD910075A810 /* MeditationViewController.swift */; };
+		18B5AE8C24BFC2A8003EFE15 /* HappyZoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5AE8B24BFC2A8003EFE15 /* HappyZoneViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		189073CF24BF84160075A810 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		189073D224BF84160075A810 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		189073D424BF84170075A810 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		189073DA24BFAD910075A810 /* MeditationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationViewController.swift; sourceTree = "<group>"; };
+		18B5AE8B24BFC2A8003EFE15 /* HappyZoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappyZoneViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +67,9 @@
 				189073C724BF84150075A810 /* ViewController.swift */,
 				189073C924BF84150075A810 /* Main.storyboard */,
 				189073CF24BF84160075A810 /* Assets.xcassets */,
+				189073DA24BFAD910075A810 /* MeditationViewController.swift */,
 				189073D124BF84160075A810 /* LaunchScreen.storyboard */,
+				18B5AE8B24BFC2A8003EFE15 /* HappyZoneViewController.swift */,
 				189073D424BF84170075A810 /* Info.plist */,
 				189073CC24BF84150075A810 /* Comma_App.xcdatamodeld */,
 			);
@@ -143,8 +149,10 @@
 			files = (
 				189073C824BF84150075A810 /* ViewController.swift in Sources */,
 				189073C424BF84150075A810 /* AppDelegate.swift in Sources */,
+				189073DB24BFAD910075A810 /* MeditationViewController.swift in Sources */,
 				189073C624BF84150075A810 /* SceneDelegate.swift in Sources */,
 				189073CE24BF84150075A810 /* Comma_App.xcdatamodeld in Sources */,
+				18B5AE8C24BFC2A8003EFE15 /* HappyZoneViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
