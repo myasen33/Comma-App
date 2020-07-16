@@ -7,14 +7,16 @@
 //
 
 import UIKit
+import SafariServices
 
 class HappyZoneViewController: UIViewController {
     
     @IBOutlet weak var backgroundGradientView: UIView!
 
+
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+
         // Create a gradient layer.
         let gradientLayer = CAGradientLayer()
         // Set the size of the layer to be equal to size of the display.
@@ -35,4 +37,21 @@ class HappyZoneViewController: UIViewController {
         return false
 
 }
+    @IBAction func news1(_ sender: UIButton) {
+        if let url = URL(string: "https://www.positive.news/society/three-good-things-online-support-groups-started-during-lockdown/") {
+            let safariVC = SFSafariViewController (url: url)
+            
+            present(safariVC, animated: true, completion: nil)
+        }
+    }
+    
+    @IBAction func news2(_ sender: UIButton) {
+        if let url = URL(string: "https://thenewdaily.com.au/news/good-news/2020/07/02/sign-language-to-speech/") {
+            let safariVC = SFSafariViewController (url: url)
+            
+            present(safariVC, animated: true, completion: nil)
+        }
+    }
+
+    
 }
