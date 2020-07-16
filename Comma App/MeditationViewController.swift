@@ -7,14 +7,32 @@
 //
 
 import UIKit
+import AVFoundation
 
 class MeditationViewController: UIViewController {
+    
+    var musicFile : String?
+    var musicEffect: AVAudioPlayer = AVAudioPlayer()
 
+    //set up button outlets
+    @IBOutlet weak var rainButton: UIButton!
+    @IBOutlet weak var forestButton: UIButton!
+    @IBOutlet weak var oceanButton: UIButton!
+    
+    @IBOutlet weak var timePicker: UIDatePicker!
+    
     @IBOutlet weak var backgroundGradientView: UIView!
+    var hour = 0
+    var minute = 0
+    var second = 0
+    var counter = 0
     override func viewDidLoad() {
-        
         super.viewDidLoad()
-
+        
+        timePicker?.datePickerMode = .countDownTimer
+              
+        timePicker?.addTarget(self, action: #selector(MeditationViewController.setTimer), for: .valueChanged)
+        
             // Create a gradient layer.
             let gradientLayer = CAGradientLayer()
             // Set the size of the layer to be equal to size of the display.
@@ -34,17 +52,71 @@ class MeditationViewController: UIViewController {
         override var shouldAutorotate: Bool {
             return false
         }
+
+
+    @objc func setTimer(timePicker: UIDatePicker) {
+           
+    //get minutes/hours separately from timepicker
+           let date = timePicker.date
+           let components = Calendar.current.dateComponents([.hour, .minute], from: date)
+        hour = components.hour!
+        minute = components.minute!
+        counter = 3600 * hour + 60 * minute
+        second = counter % 60
+}
+    
+    @IBAction func rainTapped(_ sender: Any) {
+        musicFile = Bundle.main.path(forResource: "rain", ofType: "mp3")
+        do {
+           
+           musicEffect = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: musicFile!))
+        }
+        
+        catch {
+        
+            print(error)
+        }
+        
+    }
+    @IBAction func forestTapped(_ sender: Any) {
+        musicFile = Bundle.main.path(forResource: "forest", ofType: "mp3")
+        do {
+           
+           musicEffect = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: musicFile!))
+        }
+        
+        catch {
+        
+            print(error)
+        }
+    }
+    @IBAction func oceanTapped(_ sender: Any) {
+        musicFile = Bundle.main.path(forResource: "ocean", ofType: "mp3")
+        do {
+           
+           musicEffect = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: musicFile!))
+        }
+        
+        catch {
+        
+            print(error)
+        }
     }
     
+    
+    
+    
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+         if let addVC = segue.destination as? TimerViewController {
+                 addVC.previousVC = self
+               
+               }
     }
-    */
+}
 
 

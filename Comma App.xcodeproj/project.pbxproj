@@ -16,6 +16,11 @@
 		189073D324BF84160075A810 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 189073D124BF84160075A810 /* LaunchScreen.storyboard */; };
 		189073DB24BFAD910075A810 /* MeditationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189073DA24BFAD910075A810 /* MeditationViewController.swift */; };
 		18B5AE8C24BFC2A8003EFE15 /* HappyZoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5AE8B24BFC2A8003EFE15 /* HappyZoneViewController.swift */; };
+		7FE566DF24C0B781005B090E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FE566DE24C0B781005B090E /* AVFoundation.framework */; };
+		7FE566E124C0B791005B090E /* rain.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7FE566E024C0B791005B090E /* rain.mp3 */; };
+		7FE566E324C0C1D2005B090E /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE566E224C0C1D1005B090E /* TimerViewController.swift */; };
+		7FE566E524C0CDA4005B090E /* forest.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7FE566E424C0CDA4005B090E /* forest.mp3 */; };
+		7FE566E724C0CEBD005B090E /* ocean.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7FE566E624C0CEBD005B090E /* ocean.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +35,11 @@
 		189073D424BF84170075A810 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		189073DA24BFAD910075A810 /* MeditationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationViewController.swift; sourceTree = "<group>"; };
 		18B5AE8B24BFC2A8003EFE15 /* HappyZoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappyZoneViewController.swift; sourceTree = "<group>"; };
+		7FE566DE24C0B781005B090E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		7FE566E024C0B791005B090E /* rain.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = rain.mp3; path = ../../rain.mp3; sourceTree = "<group>"; };
+		7FE566E224C0C1D1005B090E /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
+		7FE566E424C0CDA4005B090E /* forest.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = forest.mp3; path = ../../../Downloads/forest.mp3; sourceTree = "<group>"; };
+		7FE566E624C0CEBD005B090E /* ocean.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = ocean.mp3; path = ../../../Downloads/ocean.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FE566DF24C0B781005B090E /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +59,7 @@
 			children = (
 				189073C224BF84150075A810 /* Comma App */,
 				189073C124BF84150075A810 /* Products */,
+				7FE566DD24C0B780005B090E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,10 +82,22 @@
 				189073DA24BFAD910075A810 /* MeditationViewController.swift */,
 				189073D124BF84160075A810 /* LaunchScreen.storyboard */,
 				18B5AE8B24BFC2A8003EFE15 /* HappyZoneViewController.swift */,
+				7FE566E024C0B791005B090E /* rain.mp3 */,
+				7FE566E424C0CDA4005B090E /* forest.mp3 */,
+				7FE566E624C0CEBD005B090E /* ocean.mp3 */,
 				189073D424BF84170075A810 /* Info.plist */,
 				189073CC24BF84150075A810 /* Comma_App.xcdatamodeld */,
+				7FE566E224C0C1D1005B090E /* TimerViewController.swift */,
 			);
 			path = "Comma App";
+			sourceTree = "<group>";
+		};
+		7FE566DD24C0B780005B090E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7FE566DE24C0B781005B090E /* AVFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +159,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				189073D324BF84160075A810 /* LaunchScreen.storyboard in Resources */,
+				7FE566E124C0B791005B090E /* rain.mp3 in Resources */,
 				189073D024BF84160075A810 /* Assets.xcassets in Resources */,
+				7FE566E524C0CDA4005B090E /* forest.mp3 in Resources */,
 				189073CB24BF84150075A810 /* Main.storyboard in Resources */,
+				7FE566E724C0CEBD005B090E /* ocean.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,6 +177,7 @@
 				189073C824BF84150075A810 /* ViewController.swift in Sources */,
 				189073C424BF84150075A810 /* AppDelegate.swift in Sources */,
 				189073DB24BFAD910075A810 /* MeditationViewController.swift in Sources */,
+				7FE566E324C0C1D2005B090E /* TimerViewController.swift in Sources */,
 				189073C624BF84150075A810 /* SceneDelegate.swift in Sources */,
 				189073CE24BF84150075A810 /* Comma_App.xcdatamodeld in Sources */,
 				18B5AE8C24BFC2A8003EFE15 /* HappyZoneViewController.swift in Sources */,
