@@ -21,6 +21,7 @@
 		7FE566E324C0C1D2005B090E /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FE566E224C0C1D1005B090E /* TimerViewController.swift */; };
 		7FE566E524C0CDA4005B090E /* forest.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7FE566E424C0CDA4005B090E /* forest.mp3 */; };
 		7FE566E724C0CEBD005B090E /* ocean.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7FE566E624C0CEBD005B090E /* ocean.mp3 */; };
+		7FE566E924C2027D005B090E /* alarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7FE566E824C2027D005B090E /* alarm.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		7FE566E224C0C1D1005B090E /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		7FE566E424C0CDA4005B090E /* forest.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = forest.mp3; path = ../../../Downloads/forest.mp3; sourceTree = "<group>"; };
 		7FE566E624C0CEBD005B090E /* ocean.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = ocean.mp3; path = ../../../Downloads/ocean.mp3; sourceTree = "<group>"; };
+		7FE566E824C2027D005B090E /* alarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = alarm.mp3; path = ../../../Downloads/alarm.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				7FE566E024C0B791005B090E /* rain.mp3 */,
 				7FE566E424C0CDA4005B090E /* forest.mp3 */,
 				7FE566E624C0CEBD005B090E /* ocean.mp3 */,
+				7FE566E824C2027D005B090E /* alarm.mp3 */,
 				189073D424BF84170075A810 /* Info.plist */,
 				189073CC24BF84150075A810 /* Comma_App.xcdatamodeld */,
 				7FE566E224C0C1D1005B090E /* TimerViewController.swift */,
@@ -163,6 +166,7 @@
 				189073D024BF84160075A810 /* Assets.xcassets in Resources */,
 				7FE566E524C0CDA4005B090E /* forest.mp3 in Resources */,
 				189073CB24BF84150075A810 /* Main.storyboard in Resources */,
+				7FE566E924C2027D005B090E /* alarm.mp3 in Resources */,
 				7FE566E724C0CEBD005B090E /* ocean.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

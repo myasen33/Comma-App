@@ -588,10 +588,39 @@
                                     <action selector="rainTapped:" destination="Nxz-bv-nwG" eventType="touchUpInside" id="O9J-Ml-KOs"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xpA-cm-Zan" userLabel="Home Button">
+                                <rect key="frame" x="92" y="475" width="231" height="53"/>
+                                <color key="backgroundColor" red="0.81960784310000001" green="0.91372549020000005" blue="0.76470588240000004" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="53" id="83R-kL-Elg"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="231" id="Y3d-cD-amN"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="231" id="Y49-gs-uGh"/>
+                                    <constraint firstAttribute="height" constant="53" id="aNg-Na-xnV"/>
+                                    <constraint firstAttribute="width" constant="231" id="fOU-ok-aZ1"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="53" id="mmt-ci-6XR"/>
+                                </constraints>
+                                <color key="tintColor" red="0.19215686269999999" green="0.086274509799999996" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="HOME">
+                                            <attributes>
+                                                <font key="NSFont" size="21" name="Avenir-Light"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="rainTapped:" destination="Nxz-bv-nwG" eventType="touchUpInside" id="74y-Hx-Y0k"/>
+                                    <action selector="startPressed:" destination="1nO-bi-y99" eventType="touchUpInside" id="aIk-tL-gay"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="wGh-sc-ta7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="4G0-s4-P8n" firstAttribute="leading" secondItem="gwX-5D-LHk" secondAttribute="leading" id="1VK-Qc-XeZ"/>
+                            <constraint firstItem="xpA-cm-Zan" firstAttribute="top" secondItem="jcm-4a-cxl" secondAttribute="bottom" constant="84" id="1xZ-Du-yQ0"/>
                             <constraint firstItem="G8X-00-cKO" firstAttribute="leading" secondItem="Qth-zj-A2z" secondAttribute="trailing" constant="4" id="2u3-dH-AIx"/>
                             <constraint firstItem="Rot-81-eyb" firstAttribute="leading" secondItem="jcm-4a-cxl" secondAttribute="trailing" constant="1" id="4SU-2T-TBg"/>
                             <constraint firstItem="Il4-aT-F6H" firstAttribute="top" secondItem="pvF-HE-Icg" secondAttribute="bottom" constant="242" id="5aK-42-FMF"/>
@@ -601,7 +630,9 @@
                             <constraint firstItem="Rot-81-eyb" firstAttribute="top" secondItem="pvF-HE-Icg" secondAttribute="bottom" constant="242" id="FD5-5H-VUD"/>
                             <constraint firstItem="7ie-Lo-qRa" firstAttribute="top" secondItem="gbt-8V-ks8" secondAttribute="bottom" constant="21" id="Goi-ot-OVt"/>
                             <constraint firstItem="Qth-zj-A2z" firstAttribute="leading" secondItem="Il4-aT-F6H" secondAttribute="trailing" constant="8" id="HYs-JY-fob"/>
+                            <constraint firstItem="xpA-cm-Zan" firstAttribute="leading" secondItem="gwX-5D-LHk" secondAttribute="leading" constant="92" id="Jrc-dR-hur"/>
                             <constraint firstItem="Il4-aT-F6H" firstAttribute="centerX" secondItem="CV5-hv-A1P" secondAttribute="centerX" id="Mj8-Sw-SXB"/>
+                            <constraint firstItem="gwX-5D-LHk" firstAttribute="trailing" secondItem="xpA-cm-Zan" secondAttribute="trailing" constant="91" id="MuB-7D-IQj"/>
                             <constraint firstItem="4G0-s4-P8n" firstAttribute="trailing" secondItem="gwX-5D-LHk" secondAttribute="trailing" id="Q0M-bV-qvJ"/>
                             <constraint firstItem="7ie-Lo-qRa" firstAttribute="centerX" secondItem="CV5-hv-A1P" secondAttribute="centerX" id="Ve3-KC-xeY"/>
                             <constraint firstItem="pvF-HE-Icg" firstAttribute="top" secondItem="gwX-5D-LHk" secondAttribute="top" id="drx-Xi-UdJ"/>
@@ -613,8 +644,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="gdy-bg-AQZ"/>
                     <connections>
+                        <outlet property="homeButton" destination="xpA-cm-Zan" id="r5J-Aw-y91"/>
                         <outlet property="hoursLabel" destination="jcm-4a-cxl" id="8kD-ef-lYR"/>
                         <outlet property="minutesLabel" destination="Il4-aT-F6H" id="qlA-eg-FcE"/>
+                        <outlet property="pauseButton" destination="7ie-Lo-qRa" id="rjq-Zf-LdV"/>
                         <outlet property="secondsLabel" destination="G8X-00-cKO" id="bxR-20-8jS"/>
                         <outlet property="startButton" destination="gbt-8V-ks8" id="wWR-iD-lv3"/>
                     </connections>
@@ -625,7 +658,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Xpm-ni-uCg"/>
+        <segue reference="J8e-LF-izs"/>
         <segue reference="48T-NN-I8R"/>
     </inferredMetricsTieBreakers>
     <resources>

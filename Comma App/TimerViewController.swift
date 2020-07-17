@@ -13,11 +13,14 @@ class TimerViewController: UIViewController {
 
     var previousVC = MeditationViewController()
     var musicEffect: AVAudioPlayer = AVAudioPlayer()
+    var alarmEffect: AVAudioPlayer = AVAudioPlayer()
     //outlets for labels
     @IBOutlet weak var hoursLabel: UILabel!
     @IBOutlet weak var minutesLabel: UILabel!
     @IBOutlet weak var secondsLabel: UILabel!
     @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var pauseButton: UIButton!
+    @IBOutlet weak var homeButton: UIButton!
     var timer = Timer()
     var hour = 0
     var minute = 0
@@ -28,12 +31,15 @@ class TimerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //set hours minutes seconds in timer
+        homeButton.isHidden = true
          hour = previousVC.hour
          minute = previousVC.minute
          second = previousVC.second
          counter = previousVC.counter
         musicEffect = previousVC.musicEffect
-        startButton.setTitle("START", for: .normal)
+        startButton.setTitle ("START", for: .normal)
+        startButton.setTitleColor(UIColor(red: 49/255, green: 22/255, blue: 60/255, alpha: 1.0), for: .normal)
+        startButton.titleLabel?.font = UIFont(name: "Avenir-Light", size: 21)
         if (hour <= 9) {
             hoursLabel.text = "0\(hour)"
         }
@@ -55,6 +61,7 @@ class TimerViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+   
            // set minutes/hours/seconds in bottom timer
     @objc func updateTimer() {
         counter -= 1
@@ -80,6 +87,24 @@ class TimerViewController: UIViewController {
      if (second >= 10) {
          secondsLabel.text = String(second)
      }
+        if (second == 0 && minute == 0 && hour == 0) {
+            timer.invalidate()
+            pauseButton.isHidden =  true
+            startButton.isHidden = true
+            homeButton.isHidden = false
+            musicEffect.stop()
+            let musicFile = Bundle.main.path(forResource: "alarm", ofType: "mp3")
+               do {
+                  
+                  alarmEffect = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: musicFile!))
+               }
+               
+               catch {
+               
+                   print(error)
+               }
+            alarmEffect.play()
+        }
     }
     
     @IBAction func startPressed(_ sender: Any) {
