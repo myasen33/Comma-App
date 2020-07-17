@@ -27,7 +27,7 @@ class MeditationViewController: UIViewController {
     var second = 0
     var counter = 0
     let darkPurple = UIColor(red: 49/255, green: 22/255, blue: 60/255, alpha: 1.0)
-    let lightGreen = UIColor(red: 49/255, green: 22/255, blue: 60/255, alpha: 1.0)
+    let lightGreen = UIColor(red: 209/255, green: 233/255, blue: 195/255, alpha: 1.0)
     let lightBlue = UIColor(red: 195/255, green: 233/255, blue: 220/255, alpha: 1.0)
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,6 +70,8 @@ class MeditationViewController: UIViewController {
     
     @IBAction func rainTapped(_ sender: Any) {
         rainButton.backgroundColor = lightBlue
+        forestButton.backgroundColor = lightGreen
+        oceanButton.backgroundColor = lightGreen
         
         
         musicFile = Bundle.main.path(forResource: "rain", ofType: "mp3")
@@ -86,6 +88,8 @@ class MeditationViewController: UIViewController {
     }
     @IBAction func forestTapped(_ sender: Any) {
         forestButton.backgroundColor = lightBlue
+        rainButton.backgroundColor = lightGreen
+        oceanButton.backgroundColor = lightGreen
         musicFile = Bundle.main.path(forResource: "forest", ofType: "mp3")
         do {
            
@@ -99,6 +103,8 @@ class MeditationViewController: UIViewController {
     }
     @IBAction func oceanTapped(_ sender: Any) {
         oceanButton.backgroundColor = lightBlue
+        forestButton.backgroundColor = lightGreen
+        rainButton.backgroundColor = lightGreen
         musicFile = Bundle.main.path(forResource: "ocean", ofType: "mp3")
         do {
            

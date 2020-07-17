@@ -23,6 +23,10 @@ class TimerViewController: UIViewController {
     @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var pauseButton: UIButton!
     @IBOutlet weak var homeButton: UIButton!
+    @IBOutlet weak var colon1Button: UILabel!
+    @IBOutlet weak var colon2Button: UILabel!
+    @IBOutlet weak var sessionFinished: UILabel!
+    
     var timer = Timer()
     var hour = 0
     var minute = 0
@@ -50,6 +54,7 @@ class TimerViewController: UIViewController {
         
         //set hours minutes seconds in timer
         homeButton.isHidden = true
+        sessionFinished.isHidden = true
          hour = previousVC.hour
          minute = previousVC.minute
          second = previousVC.second
@@ -78,7 +83,19 @@ class TimerViewController: UIViewController {
         }
         // Do any additional setup after loading the view.
     }
-    
+    func finish() {
+          timer.invalidate()
+          pauseButton.isHidden =  true
+          startButton.isHidden = true
+          homeButton.isHidden = false
+          sessionFinished.isHidden = false
+          minutesLabel.isHidden = true
+          secondsLabel.isHidden = true
+          hoursLabel.isHidden = true
+          colon1Button.isHidden = true
+          colon2Button.isHidden = true
+          musicEffect.stop()
+      }
    
            // set minutes/hours/seconds in bottom timer
     @objc func updateTimer() {
@@ -106,11 +123,7 @@ class TimerViewController: UIViewController {
          secondsLabel.text = String(second)
      }
         if (second == 0 && minute == 0 && hour == 0) {
-            timer.invalidate()
-            pauseButton.isHidden =  true
-            startButton.isHidden = true
-            homeButton.isHidden = false
-            musicEffect.stop()
+            finish()
             let musicFile = Bundle.main.path(forResource: "alarm", ofType: "mp3")
                do {
                   
@@ -125,6 +138,7 @@ class TimerViewController: UIViewController {
         }
     }
     
+  
     @IBAction func startPressed(_ sender: Any) {
         if (started == false) {timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
             startButton.setTitle("FINISH", for: .normal)
@@ -134,17 +148,8 @@ class TimerViewController: UIViewController {
            
             
         } else {
-            timer.invalidate()
-            second = 0
-            hour = 0
-            minute = 0
-            counter = 0
-            secondsLabel.text = "0\(second)"
-            minutesLabel.text = "0\(minute)"
-            hoursLabel.text = "0\(hour)"
-            startButton.setTitle("START", for: .normal)
+            finish()
             started = false
-            musicEffect.stop()
         
             
         }

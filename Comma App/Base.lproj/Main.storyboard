@@ -626,6 +626,23 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="wGh-sc-ta7"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ciq-tY-qYJ">
+                                <rect key="frame" x="-13.5" y="270" width="441" height="105"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="441" id="C2i-3T-lbM"/>
+                                    <constraint firstAttribute="height" constant="105" id="VEK-Tb-Dmg"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="SESSION FINISHED">
+                                        <attributes>
+                                            <color key="NSColor" red="0.19215686274509802" green="0.086274509803921567" blue="0.23529411764705882" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="47" name="AvenirNextCondensed-DemiBold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -644,22 +661,31 @@
                             <constraint firstItem="Il4-aT-F6H" firstAttribute="centerX" secondItem="CV5-hv-A1P" secondAttribute="centerX" id="Mj8-Sw-SXB"/>
                             <constraint firstItem="gwX-5D-LHk" firstAttribute="trailing" secondItem="xpA-cm-Zan" secondAttribute="trailing" constant="91" id="MuB-7D-IQj"/>
                             <constraint firstItem="4G0-s4-P8n" firstAttribute="trailing" secondItem="gwX-5D-LHk" secondAttribute="trailing" id="Q0M-bV-qvJ"/>
+                            <constraint firstItem="gbt-8V-ks8" firstAttribute="top" secondItem="Ciq-tY-qYJ" secondAttribute="bottom" constant="100" id="Rjc-FA-7tG"/>
                             <constraint firstItem="7ie-Lo-qRa" firstAttribute="centerX" secondItem="CV5-hv-A1P" secondAttribute="centerX" id="Ve3-KC-xeY"/>
+                            <constraint firstItem="Ciq-tY-qYJ" firstAttribute="centerX" secondItem="CV5-hv-A1P" secondAttribute="centerX" id="W6Q-rc-qiU"/>
                             <constraint firstItem="pvF-HE-Icg" firstAttribute="top" secondItem="gwX-5D-LHk" secondAttribute="top" id="drx-Xi-UdJ"/>
                             <constraint firstItem="Qth-zj-A2z" firstAttribute="top" secondItem="pvF-HE-Icg" secondAttribute="bottom" constant="242" id="dxf-5A-EAL"/>
+                            <constraint firstItem="xpA-cm-Zan" firstAttribute="top" secondItem="Ciq-tY-qYJ" secondAttribute="bottom" constant="100" id="fk1-U8-0kD"/>
                             <constraint firstItem="G8X-00-cKO" firstAttribute="top" secondItem="pvF-HE-Icg" secondAttribute="bottom" constant="242" id="hub-Qo-Gjp"/>
+                            <constraint firstAttribute="trailing" secondItem="Ciq-tY-qYJ" secondAttribute="trailing" constant="-13.5" id="sco-33-h7a"/>
                             <constraint firstItem="jcm-4a-cxl" firstAttribute="top" secondItem="pvF-HE-Icg" secondAttribute="bottom" constant="242" id="swz-k5-elI"/>
+                            <constraint firstItem="Ciq-tY-qYJ" firstAttribute="leading" secondItem="CV5-hv-A1P" secondAttribute="leading" constant="-13.5" id="wvs-dw-Mnc"/>
+                            <constraint firstItem="Ciq-tY-qYJ" firstAttribute="top" secondItem="pvF-HE-Icg" secondAttribute="bottom" constant="226" id="wwR-j3-z6t"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gwX-5D-LHk"/>
                     </view>
                     <navigationItem key="navigationItem" id="gdy-bg-AQZ"/>
                     <connections>
                         <outlet property="backgroundGradientView" destination="bVe-kR-L11" id="sR1-Hx-cGL"/>
+                        <outlet property="colon1Button" destination="Rot-81-eyb" id="3J4-kO-vmB"/>
+                        <outlet property="colon2Button" destination="Qth-zj-A2z" id="D1p-Q2-pQB"/>
                         <outlet property="homeButton" destination="xpA-cm-Zan" id="r5J-Aw-y91"/>
                         <outlet property="hoursLabel" destination="jcm-4a-cxl" id="8kD-ef-lYR"/>
                         <outlet property="minutesLabel" destination="Il4-aT-F6H" id="qlA-eg-FcE"/>
                         <outlet property="pauseButton" destination="7ie-Lo-qRa" id="rjq-Zf-LdV"/>
                         <outlet property="secondsLabel" destination="G8X-00-cKO" id="bxR-20-8jS"/>
+                        <outlet property="sessionFinished" destination="Ciq-tY-qYJ" id="Qr0-xt-Sbm"/>
                         <outlet property="startButton" destination="gbt-8V-ks8" id="wWR-iD-lv3"/>
                     </connections>
                 </viewController>
@@ -670,7 +696,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="J8e-LF-izs"/>
-        <segue reference="48T-NN-I8R"/>
+        <segue reference="wGh-sc-ta7"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="commalogo (1)" width="1500" height="1500"/>
