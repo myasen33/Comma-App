@@ -437,10 +437,20 @@
                         <subviews>
                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4G0-s4-P8n" userLabel="Background Gradient View">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bVe-kR-L11">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </view>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="842" id="0xZ-vv-o1O"/>
                                     <constraint firstAttribute="width" constant="414" id="3HK-Kd-W7f"/>
+                                    <constraint firstItem="bVe-kR-L11" firstAttribute="leading" secondItem="4G0-s4-P8n" secondAttribute="leading" id="NC4-vD-SEO"/>
+                                    <constraint firstAttribute="bottom" secondItem="bVe-kR-L11" secondAttribute="bottom" id="eZA-bS-9TG"/>
+                                    <constraint firstItem="bVe-kR-L11" firstAttribute="top" secondItem="4G0-s4-P8n" secondAttribute="top" id="vxt-eG-0tL"/>
+                                    <constraint firstAttribute="trailing" secondItem="bVe-kR-L11" secondAttribute="trailing" id="zCq-No-n5z"/>
                                 </constraints>
                             </view>
                             <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pvF-HE-Icg">
@@ -644,6 +654,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="gdy-bg-AQZ"/>
                     <connections>
+                        <outlet property="backgroundGradientView" destination="bVe-kR-L11" id="sR1-Hx-cGL"/>
                         <outlet property="homeButton" destination="xpA-cm-Zan" id="r5J-Aw-y91"/>
                         <outlet property="hoursLabel" destination="jcm-4a-cxl" id="8kD-ef-lYR"/>
                         <outlet property="minutesLabel" destination="Il4-aT-F6H" id="qlA-eg-FcE"/>
